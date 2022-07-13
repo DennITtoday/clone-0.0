@@ -2,7 +2,7 @@ export interface IVideo{
 
     _id:string;
     tittle:string;
-    usr:string;
+    url:string;
     author:string;
     description:string;
 }
