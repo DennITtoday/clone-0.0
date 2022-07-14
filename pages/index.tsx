@@ -1,20 +1,212 @@
-import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react"
-import Navbar from "../components/navbar"
+import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
 
 function HomePage() {
-    const { toggleColorMode } = useColorMode()
+  // const { toggleColorMode } = useColorMode();
 
-    const bg = useColorModeValue('red.500', 'red.200')
-    const color = useColorModeValue('white', 'gray.800')
-    return (
-    
+  // const bg = useColorModeValue("red.500", "red.200");
+  // const color = useColorModeValue("white", "gray.800");
+  return (
     <>
-    <Navbar /><Box >
+      <Box w="full" h="full" bgColor="gray.500">
         This box's style will change based on the color mode.
       </Box>
-      
-      </>
-    )
-  }
-  
-  export default HomePage
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+      <Box w="full" h="full" bgColor="gray.500">
+        This box's style will change based on the color mode.
+      </Box>
+    </>
+  );
+}
+
+export default HomePage;
