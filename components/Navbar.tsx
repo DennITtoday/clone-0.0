@@ -3,24 +3,21 @@ import { ReactNode } from 'react';
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
   Link,
   IconButton,
   Button,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Router, useRouter } from 'next/router';
 
-const Links = ['Home', 'Video List',];
+const Links = ['All Videos'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -31,14 +28,15 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
+    href={'/'}>
     {children}
   </Link>
+  
 );
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+const router = useRouter()
 
   return (
     <>
@@ -71,6 +69,10 @@ export default function Simple() {
                 cursor={'pointer'}
                 minW={0}>
               </MenuButton>
+              <Stack spacing={4} direction='row' align='center'>
+              <Button onClick={()=>router.push('/log/Authorization')}>Authorization</Button>
+              <Button onClick={() => router.push('/videos/create')}>Download</Button>
+              </Stack>
               <ColorModeSwitcher />
             </Menu>
           </Flex>
@@ -85,9 +87,8 @@ export default function Simple() {
             </Stack>
           </Box>
         ) : null}
-      </Box>
 
-      <Box p={4}>Main Content Here</Box>
+      </Box>
     </>
   );
 }
