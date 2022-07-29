@@ -31,12 +31,11 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     href={'/'}>
     {children}
   </Link>
-  
 );
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-const router = useRouter()
+
 
   return (
     <>
@@ -70,8 +69,8 @@ const router = useRouter()
                 minW={0}>
               </MenuButton>
               <Stack spacing={4} direction='row' align='center'>
-              <Button onClick={()=>router.push('/log/Authorization')}>Authorization</Button>
-              <Button onClick={() => router.push('/videos/create')}>Download</Button>
+                <Link href='/auth/login'> <Button>Authorization</Button></Link>
+                <Link href='/videos/create'> <Button>Download</Button></Link>
               </Stack>
               <ColorModeSwitcher />
             </Menu>

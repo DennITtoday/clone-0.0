@@ -53,7 +53,7 @@ const LoginForm = () => {
                     <Box>
                         <Checkbox>Remember me </Checkbox>
                     </Box>
-                    <Box onClick={() => router.push('/log/accCreate')}>
+                    <Box onClick={() => router.push('/auth/register')}>
                         <Link color='#008080'>Create new account</Link>
                     </Box>
                 </Stack>

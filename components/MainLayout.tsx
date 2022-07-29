@@ -13,7 +13,7 @@ const MainLayout: NextPage<IMainLayoutProps> = ({ children }) => {
     <>
       <NavBar />
       <Box>{children}</Box>
-      
+
     </>
   );
 };
