@@ -69,8 +69,20 @@ export default function Simple() {
                 minW={0}>
               </MenuButton>
               <Stack spacing={4} direction='row' align='center'>
-                <Link href='/auth/login'> <Button>Authorization</Button></Link>
-                <Link href='/videos/create'> <Button>Download</Button></Link>
+                <Link px={2}
+                  py={1}
+                  rounded={'md'}
+                  _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('gray.200', 'gray.700'),
+                  }} href='/auth/login'> Authorization</Link>
+                <Link px={2}
+                  py={1}
+                  rounded={'md'}
+                  _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('gray.200', 'gray.700'),
+                  }} href='/videos/create'> Download</Link>
               </Stack>
               <ColorModeSwitcher />
             </Menu>
