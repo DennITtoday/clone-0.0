@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Authorization = () => {
     const router = useRouter()
     return (
-        <Flex minHeight='100vh' width='full' align='center' justifyContent='center'>
+        <Flex minHeight='90vh' width='full' align='center' justifyContent='center'>
             <Box
                 borderWidth={3}
                 borderRadius={10}

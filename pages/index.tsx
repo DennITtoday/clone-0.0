@@ -8,7 +8,7 @@ import { IVideo } from "../types/video";
 const Index = () => {
   const router = useRouter()
   const videos: IVideo[] = [
-    { _id: '1', tittle: 'Fuck off', author: 'UAreGay', preview: 'https://support.discord.com/hc/user_images/81TKxGEqVJruMIz7RCN8JA.jpeg', video: 'https://www.youtube.com/watch?v=A0CfYSVzAZI&t=3945s' }
+    { _id: '1', tittle: 'Fuck off', description: 'something....', preview: 'https://support.discord.com/hc/user_images/81TKxGEqVJruMIz7RCN8JA.jpeg', video: 'https://www.youtube.com/watch?v=A0CfYSVzAZI&t=3945s' }
 
   ]
   return (

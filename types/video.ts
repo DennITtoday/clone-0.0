@@ -1,8 +1,8 @@
 export interface IVideo {
 
-    _id:string;
-    tittle:string;
-    author:string;
-    preview:string;
-    video:string;
+    _id: string;
+    tittle: string;
+    preview: string;
+    video: string;
+    description: string
 }
