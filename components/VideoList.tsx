@@ -15,6 +15,7 @@ const VideoList: React.FC<VideoListProps> = ({ videos }) => {
                         key={video._id}
                         video={video} />
                 )}
+
             </Box>
         </Grid>
     );

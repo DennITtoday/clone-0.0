@@ -1,4 +1,5 @@
 import { AspectRatio, Box, Grid, GridItem, } from "@chakra-ui/react";
+import axios from "axios";
 import React from "react";
 import { IVideo } from "../../types/video";
 
@@ -6,6 +7,7 @@ const VideoPage = () => {
   const videos: IVideo = {
     _id: '1', tittle: 'Fuck off', description: 'something....', preview: 'https://support.discord.com/hc/user_images/81TKxGEqVJruMIz7RCN8JA.jpeg', video: 'https://www.youtube.com/embed/QhBnZ6NPOY0'
   }
+ 
   return (
     <Grid m="12" >
       <GridItem maxW="1200px" maxH="600px" p="1">
@@ -19,7 +21,6 @@ const VideoPage = () => {
         <GridItem fontSize={16} color='gray' p="2">{videos.description}</GridItem>
       </Box>
     </Grid >
-
   );
 };
 

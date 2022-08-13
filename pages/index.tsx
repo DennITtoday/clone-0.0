@@ -1,16 +1,17 @@
-import { Box, Button, useColorMode, Text, useColorModeValue, Image, Grid, GridItem } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
 import React from 'react'
-import styles from '../styles/VideoItem.module.scss'
 import VideoList from "../components/VideoList";
-import { useRouter } from "next/router";
-import { IVideo } from "../types/video";
+import { useTypedSelector } from '../hooks/usetypedSelector';
+import { fetchVideos } from '../store/actions-creators/video';
+
+
 
 const Index = () => {
-  const router = useRouter()
-  const videos: IVideo[] = [
-    { _id: '1', tittle: 'Fuck off', description: 'something....', preview: 'https://support.discord.com/hc/user_images/81TKxGEqVJruMIz7RCN8JA.jpeg', video: 'https://www.youtube.com/watch?v=A0CfYSVzAZI&t=3945s' }
+  const { videos, error } = useTypedSelector(state => state.video)
+  if (error) {
+    return <Box>{error}</Box>
 
-  ]
+  }
   return (
     <>
       <VideoList videos={videos} />
@@ -19,3 +20,4 @@ const Index = () => {
 }
 
 export default Index;
+
