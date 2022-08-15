@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 import {
   Box,
@@ -15,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Router, useRouter } from 'next/router';
+
 
 const Links = ['All Videos'];
 
