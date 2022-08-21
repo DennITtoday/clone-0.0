@@ -1,10 +1,10 @@
-import { Box } from '@chakra-ui/react';
 import React from 'react'
 import VideoList from "../components/VideoList";
+import { IVideo } from '../types/video';
 
 
 
-const Index = ({ videos }) => {
+const Index = ({ videos }: { videos: IVideo }) => {
   return (
     <>
       <VideoList videos={videos} />
