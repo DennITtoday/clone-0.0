@@ -18,7 +18,11 @@ const Create = () => {
             return;
         }
         if (!video) {
-            alert("At first, select picture!")
+            alert("At first, select video!")
+            return;
+        }
+        if(!videoName.value){
+            alert("At first select video tittle!")
             return;
         }
         const formData = new FormData()
@@ -27,7 +31,7 @@ const Create = () => {
         formData.append('picture', picture);
         formData.append('video', video);
         axios.post('http://localhost:5000/videos', formData)
-            .then(resp => router.push('/videos'))
+            .then(() => router.push('/'))
             .catch(e => console.log(e))
     }
 
@@ -68,7 +72,7 @@ const Create = () => {
                         </FormLabel>
                     </FormControl>
                     <Box alignItems='center'>
-                        <Button width='full' mt={4} onClick={handleUpload} > Upload</Button>
+                        <Button width='full' mt={4} onClick={handleUpload}> Upload</Button>
                     </Box>
                 </form>
             </Box>
