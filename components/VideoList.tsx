@@ -7,14 +7,14 @@ const VideoList = ({ videos }: { videos: IVideo }) => {
 
     return (
         <Grid>
-            <Box >
+            <Grid margin='40px' templateColumns='repeat(4, 1fr)'>
                 {videos.map(video =>
                     <VideoItem
                         key={video.videoName}
                         video={video} />
                 )}
 
-            </Box>
+            </Grid>
         </Grid>
     );
 };

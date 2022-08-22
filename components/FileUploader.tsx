@@ -1,3 +1,4 @@
+import { Box, Input } from "@chakra-ui/react";
 import React, { useRef } from "react";
 
 interface FileUploadProps {
@@ -16,16 +17,17 @@ const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) 
         setFile(e.target.files[0])
     }
     return (
-        <div onClick={() => ref.current?.click()}>
-            <input
+        <Box onClick={() => ref.current?.click()}>
+            <Input
                 type="file"
                 accept={accept}
                 style={{ display: "none" }}
                 ref={ref}
                 onChange={onChange}
+
             />
             {children}
-        </div>
+        </Box>
     );
 
 }

@@ -8,8 +8,7 @@ const VideoItem = ({ video }: { video: IVideo }) => {
     const router = useRouter()
     return (
         <>
-            <Grid margin='40px' templateColumns='repeat(4, 1fr)' >
-                <GridItem className={styles.videoList} width='full' maxWidth='600px' >
+                <GridItem className={styles.videoList} width='full' maxWidth='380px' >
                     <Image onClick={() => router.push('/videos/' + video.videoName)}
                         src={'http://localhost:5000/' + video.picture}
                         alt='PICTURE ERROR'
@@ -20,7 +19,6 @@ const VideoItem = ({ video }: { video: IVideo }) => {
                         <Text onClick={() => router.push('/videos/' + video.videoName)}>{video.videoName}</Text>
                     </Box>
                 </GridItem>
-            </Grid>
         </>
     );
 };
