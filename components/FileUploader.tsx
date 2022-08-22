@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 interface FileUploadProps {
     setFile: Function;
     accept: string;
+    children: any;
 }
 
 const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) => {
@@ -15,7 +16,7 @@ const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) 
         setFile(e.target.files[0])
     }
     return (
-        <div onClick={() => ref.current.click()}>
+        <div onClick={() => ref.current?.click()}>
             <input
                 type="file"
                 accept={accept}
