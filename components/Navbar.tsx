@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import {
   Box,
   Flex,
@@ -17,6 +17,10 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, Search2Icon, SearchIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { IVideo } from '../types/video';
+import axios from 'axios';
+
+
 
 
 const Links = ['All Videos'];
@@ -37,9 +41,14 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 );
 
-export default function Simple() {
+export default function Simple(videos: IVideo) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [query, setQuery] = useState(String)
+  const search = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value)
+    searchVideos(e.target.value)
 
+  }
 
   return (
     <>
@@ -69,7 +78,13 @@ export default function Simple() {
                 // eslint-disable-next-line react/no-children-prop
                 children={<SearchIcon color={'gray.300'} />}
               />
-              <Input placeholder={"Search video"}></Input>
+              <Input
+                placeholder={"Search video"}
+                value={query}
+                onChange={search}
+              >
+
+              </Input>
             </InputGroup>
           </Stack>
           <Flex>
@@ -115,4 +130,17 @@ export default function Simple() {
       </Box>
     </>
   );
+}
+const searchVideos = (query: string) => {
+  return async (videoSearch: any) => {
+    try {
+      const response = axios.get('http://localhost:5000/videos' + query)
+      videoSearch({ payload: (await response).data })
+    }
+    catch (e) {
+      videoSearch({
+        payload: 'ERROR_MESSAGE'
+      })
+    }
+  }
 }
