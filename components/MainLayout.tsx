@@ -1,5 +1,4 @@
 import { Box } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
 import { NextPage } from "next";
 import React, { ReactNode } from "react";
 import NavBar from "./Navbar";
