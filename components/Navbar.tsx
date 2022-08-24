@@ -11,8 +11,11 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Input,
+  InputGroup,
+  InputLeftElement,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, Search2Icon, SearchIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 
@@ -29,7 +32,9 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     }}
     href={'/'}>
     {children}
+
   </Link>
+
 );
 
 export default function Simple() {
@@ -48,7 +53,6 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Welcome!</Box>
             <HStack
               as={'nav'}
               spacing={4}
@@ -58,7 +62,17 @@ export default function Simple() {
               ))}
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
+          <Stack spacing={4} width={'600px'} p={2}>
+            <InputGroup>
+              <InputLeftElement
+                //может как то можно по-другому пофиксить но я хз как
+                // eslint-disable-next-line react/no-children-prop
+                children={<SearchIcon color={'gray.300'} />}
+              />
+              <Input placeholder={"Search video"}></Input>
+            </InputGroup>
+          </Stack>
+          <Flex>
             <Menu>
               <MenuButton
                 as={Button}
@@ -74,14 +88,14 @@ export default function Simple() {
                   _hover={{
                     textDecoration: 'none',
                     bg: useColorModeValue('gray.200', 'gray.700'),
-                  }} href='/auth/login'> Authorization</Link>
+                  }} href='/auth/login'> Authorization </Link>
                 <Link px={2}
                   py={1}
                   rounded={'md'}
                   _hover={{
                     textDecoration: 'none',
                     bg: useColorModeValue('gray.200', 'gray.700'),
-                  }} href='/videos/create'> Download</Link>
+                  }} href='/videos/create'> Upload </Link>
               </Stack>
               <ColorModeSwitcher />
             </Menu>

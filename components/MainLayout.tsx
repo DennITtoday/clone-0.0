@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/layout";
+import { Input, InputGroup } from "@chakra-ui/react";
 import { NextPage } from "next";
 import React, { ReactNode } from "react";
 import NavBar from "./Navbar";
@@ -12,6 +13,7 @@ const MainLayout: NextPage<IMainLayoutProps> = ({ children }) => {
     <>
       <NavBar />
       <Box>{children}</Box>
+
 
     </>
   );
