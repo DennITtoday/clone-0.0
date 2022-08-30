@@ -47,8 +47,6 @@ export default function Simple(videos: IVideo) {
   const search = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value)
     searchVideos(e.target.value)
-    console.log(value)
-
   }
 
   return (
