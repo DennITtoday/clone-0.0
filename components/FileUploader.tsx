@@ -27,3 +27,4 @@ const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) 
     );
 
 }
+export default FileUploader;
