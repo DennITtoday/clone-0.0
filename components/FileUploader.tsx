@@ -10,12 +10,8 @@ interface FileUploadProps {
 const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) => {
 
 
-    const ref = useRef<HTMLInputElement>()
+    const ref = useRef<HTMLInputElement>(null)
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-        setFile(e.target.files[0])
-    }
     return (
         <Box onClick={() => ref.current?.click()}>
             <Input
@@ -23,7 +19,7 @@ const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) 
                 accept={accept}
                 style={{ display: "none" }}
                 ref={ref}
-                onChange={onChange}
+                onChange={(e) => setFile(e.target.files && e.target.files[0])}
 
             />
             {children}
@@ -31,12 +27,3 @@ const FileUploader: React.FC<FileUploadProps> = ({ setFile, accept, children }) 
     );
 
 }
-
-
-
-
-
-
-
-
-export default FileUploader;

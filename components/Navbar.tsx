@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import {
   Box,
   Flex,
@@ -41,13 +41,21 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 
 );
 
-export default function Simple(videos: IVideo) {
+export default function Simple() {
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [query, setQuery] = useState(String)
-  const search = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value)
-    searchVideos(e.target.value)
-  }
+  const [videos, setVideos] = useState([]);
+  const [query, setQuery] = useState({
+    s: ''
+  })
+  useEffect(() => {
+    async (videos: IVideo) => {
+      const response = await fetch('http://localhost:5000/videos/search/' + videos.videoName)
+      const content = await response.json();
+      setVideos(content.data)
+    }
+  })
 
   return (
     <>
@@ -78,9 +86,10 @@ export default function Simple(videos: IVideo) {
                 children={<SearchIcon color={'gray.300'} />}
               />
               <Input
+                videos={videos}
                 placeholder={"Search video"}
-                value={query}
-                onChange={search}
+                query={query}
+                setQuery={setQuery}
               >
 
               </Input>
@@ -130,16 +139,4 @@ export default function Simple(videos: IVideo) {
     </>
   );
 }
-const searchVideos = (query: string) => {
-  return async (videoSearch: any) => {
-    try {
-      const response = axios.get('http://localhost:5000/videos' + query)
-      videoSearch({ payload: (await response).data })
-    }
-    catch (e) {
-      videoSearch({
-        payload: 'ERROR_MESSAGE'
-      })
-    }
-  }
-}
+
