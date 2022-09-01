@@ -9,8 +9,8 @@ const VideoPage = ({ video }: { video: IVideo }) => {
   return (
     <Grid m="12" >
       <GridItem maxW="1200px" maxH="600px" p="1">
-        <AspectRatio maxW="1200px" flexDirection="column" ratio={16 / 9} ><iframe
-          allowFullScreen
+        <AspectRatio maxW="1200px" flexDirection="column" ratio={16 / 9}><video
+          controls
           src={'http://localhost:5000/' + video.video}
         /></AspectRatio>
       </GridItem>
@@ -22,7 +22,7 @@ const VideoPage = ({ video }: { video: IVideo }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async(ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const response = await fetch("http://localhost:5000/videos/" + ctx.query.id);
   const video = await response.json();
   return {

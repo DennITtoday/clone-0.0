@@ -1,6 +1,5 @@
 import { AspectRatio, Box, Grid, GridItem, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
-import styles from '../styles/VideoItem.module.scss'
 import { useRouter } from "next/router";
 import { IVideo } from "../types/video";
 
@@ -22,7 +21,7 @@ const VideoItem = ({ video }: { video: IVideo }) => {
     return (
         <>
 
-            <GridItem className={styles.videoList} width='full' maxWidth='380px' >
+            <Box width='full' maxWidth='380px' m="2px" p="12px" >
                 <Link _hover={{ color: 'LightSteelBlue' }} style={{ textDecoration: 'none' }} href={'/videos/' + video.video.split('.')[0]}>
                     <AspectRatio height='180px' width='100%'><video
                         poster={'http://localhost:5000/' + video.picture}
@@ -34,7 +33,7 @@ const VideoItem = ({ video }: { video: IVideo }) => {
                         <Text onClick={() => router.push('/videos/' + video.videoName)}>{video.videoName}</Text>
                     </Box>
                 </Link>
-            </GridItem>
+            </Box>
 
         </>
     );
